@@ -9,7 +9,7 @@ const ToxicityChecker = () => {
   // Function to check text toxicity
   const checkText = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/moderate-text", { text });
+      const res = await axios.post("https://safenet-api.onrender.com/api/moderate", data);
       setScore(res.data.score);
     } catch (error) {
       console.error("Error checking text:", error);
